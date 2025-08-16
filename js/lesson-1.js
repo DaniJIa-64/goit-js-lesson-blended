@@ -19,7 +19,7 @@
 // "10 входить в першу чверть"
 
 // Math.floor(Math.random() * (max - min + 1) + min);
-const min = Math.floor(Math.random() * (59 - 0 + 1) + 0);
+/* const min = Math.floor(Math.random() * (59 - 0 + 1) + 0);
 
 function time(number) {
   if (number >= 0 && number < 15) {
@@ -36,7 +36,7 @@ function time(number) {
 }
 
 time(min);
-console.log(`Згенероване число: ${min}`);
+console.log(`Згенероване число: ${min}`); */
 
 ////////////////////////////
 
@@ -59,6 +59,18 @@ console.log(`Згенероване число: ${min}`);
 // Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
+const minutes = prompt('Введіть кількість хвилин:');
+
+function totalTime(time) {
+  const totalHours = Math.floor(time / 60);
+  const totalMinutes = time % 60;
+
+  return `${String(totalHours).padStart(2, '0')}:${String(
+    totalMinutes
+  ).padStart(2, '0')}`;
+}
+
+console.log(totalTime(minutes));
 
 // Завдання 5:
 
